@@ -34,8 +34,11 @@ deploy .#$(hostname)
 -->
 
 ###### Linux
+
+Put opnix service token in `/etc/opnix-token`
+
 ```console
-nixos-rebuild switch --flake github:chkpwd/nixos/<branch>#$(hostname -s)
+nixos-rebuild switch --flake github:ammmze/nixos/<branch>#$(hostname -s)
 ```
 <!--
 ###### MacOS

@@ -12,18 +12,6 @@
   networking = {
     hostName = "node2";
     domain = "la.racknerd.cashmedia.me";
-  };
-
-  boot = {
-    loader.grub = {
-      enable = true;
-      device = "/dev/vda";
-    };
-    # loader.systemd-boot.enable = true;
-    # loader.efi.canTouchEfiVariables = true;
-  };
-
-  networking = {
     useDHCP = true;
     nftables.enable = true;
     firewall = {
@@ -42,6 +30,15 @@
     };
   };
 
+  boot = {
+    loader.grub = {
+      enable = true;
+      device = "/dev/vda";
+    };
+    # loader.systemd-boot.enable = true;
+    # loader.efi.canTouchEfiVariables = true;
+  };
+
   services = {
     openssh.enable = true;
     qemuGuest.enable = true;
@@ -49,6 +46,13 @@
   };
 
   mainUser.enable = true;
+
+  local = {
+    opnix = {
+      enable = true;
+      configFile = ./op.json;
+    };
+  };
 
   system.stateVersion = "24.11";
 }
