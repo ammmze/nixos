@@ -1,4 +1,8 @@
 {
   "secrets": [
+    {
+      "path": "wg/private-key",
+      "reference": "op://VPS/wireguard keys/node2-la-racknerd"
+    }
   ]
 }

@@ -7,6 +7,7 @@
     ./hardware-configuration.nix
     # ./disk-config.nix
     # ./incus.nix
+    ./wireguard.nix
   ];
 
   networking = {
